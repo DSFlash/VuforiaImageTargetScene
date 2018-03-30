@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Chandigarh" size="0.181500 0.120549" />
+    <ImageTarget name="Pampers" size="0.074100 0.048694" />
+    <ImageTarget name="Infy" size="0.141100 0.141100" />
+  </Tracking>
+</QCARConfig>

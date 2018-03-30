@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yac-GG-7b5">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mDu-2t-eek">
+            <objects>
+                <navigationController id="Yac-GG-7b5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IAV-jW-N28">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x4p-RS-HCJ" kind="relationship" relationship="rootViewController" id="C8d-Yw-Xls"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpc-gi-zyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1409" y="21"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="8I6-T9-kKY">
+            <objects>
+                <viewController id="x4p-RS-HCJ" customClass="LaunchViewController" customModule="VuforiaAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zpX-bI-JNK"/>
+                        <viewControllerLayoutGuide type="bottom" id="tZT-R0-4wT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KDo-ap-qvN">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feC-q7-11H">
+                                <rect key="frame" x="239" y="169.5" width="189" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Image Detection"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="1rv-2G-k3G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="feC-q7-11H" firstAttribute="centerY" secondItem="KDo-ap-qvN" secondAttribute="centerY" id="QHY-gg-4Dh"/>
+                            <constraint firstItem="feC-q7-11H" firstAttribute="centerX" secondItem="KDo-ap-qvN" secondAttribute="centerX" id="ZUa-wR-ijG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bgL-2b-rv7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yuu-Ne-p9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-537" y="20"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VuforiaAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="lqx-6d-1Hl" kind="show" identifier="sceneVC" id="2am-rH-dzO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="20"/>
+        </scene>
+        <!--Scene View Controller-->
+        <scene sceneID="1uS-qV-fNc">
+            <objects>
+                <viewController id="lqx-6d-1Hl" customClass="SceneViewController" customModule="VuforiaAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="krM-7g-nmw">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="lqx-6d-1Hl" id="UMF-zR-dbi"/>
+                        </connections>
+                    </arscnView>
+                    <connections>
+                        <outlet property="sceneView" destination="krM-7g-nmw" id="sGO-eF-NTb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmM-tc-QNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="20"/>
+        </scene>
+    </scenes>
+</document>
